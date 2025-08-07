@@ -3,23 +3,27 @@
 <h1>
     Weather app
 </h1>
+    <form method="get" action="">
+        <input type="text" name="city_id" placeholder="Enter your city name">
+        <button type="submit"> Get Weather</button>
+    </form>
+
+    <h2>
+        City : {{city}}
+    </h2>
+
+    <h3>   
+        {% if current_temperature %}
+            temprature : {{current_temperature}} <br>
+            pressure : {{current_pressure}} <br>
+            humidity : {{current_humidity}} <br>
+            description is : {{weather_description}} <br>
+        {% else %}
+            <li>
+                sorry the city was not found 
+            </li>
+        {% endif %}
+    </h3>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
