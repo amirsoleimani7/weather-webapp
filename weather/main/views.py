@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import requests , json
+import requests , json , os
 
 
 def index(request):
 
-    api_key = "e3c83b511869492240dfe8d76dbfb1ef"
+
+    with open("/home/amir/weather_api.txt") as f:
+        api_key = f.read().strip()
+
     base_url = "http://api.openweathermap.org/data/2.5/weather"
 
     city_name = request.GET.get('city_id')
