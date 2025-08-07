@@ -15,14 +15,11 @@ def index(request):
     response = requests.get(complete_url)
     
     x = response.json()
-
-    print(f"city is : {city_name}")
-    print(f"the code : {x["cod"]}") # if the cod is 200 means OK
-
     context =  {}
 
+
     context['city'] = city_name
-    
+
     if city_name :     
         if x["cod"] not in ['401' , '404']:
             y = x["main"]

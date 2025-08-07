@@ -1,4 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
+<head>
+
+
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+
 <body>
 <h1>
     Weather app
@@ -7,16 +18,16 @@
         <input type="text" name="city_id" placeholder="Enter your city name">
         <button type="submit"> Get Weather</button>
     </form>
-
+    <br >
     <h2>
         City : {{city}}
     </h2>
 
     <h3>   
         {% if current_temperature %}
-            temprature : {{current_temperature}} <br>
-            pressure : {{current_pressure}} <br>
-            humidity : {{current_humidity}} <br>
+            temprature : {{current_temperature}}°C<br>
+            pressure : {{current_pressure}} pa <br>
+            humidity : {{current_humidity}}% <br>
             description is : {{weather_description}} <br>
         {% else %}
             <li>
