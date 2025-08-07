@@ -7,7 +7,7 @@
 ## Features
 - using openWeathermap API to ge the city's weather information
 
-
+## Installation 
 ```bash
 # Clone the repository
 git clone git@github.com:amirsoleimani7/personal-blog.git
