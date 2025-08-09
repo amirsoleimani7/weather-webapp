@@ -10,7 +10,7 @@
 ## Installation 
 ```bash
 # Clone the repository
-git clone git@github.com:amirsoleimani7/personal-blog.git
+git clone git@github.com:amirsoleimani7/weather-webapp.git
 cd weather-webapp
 
 # Create and activate a virtual environment
